@@ -1,0 +1,30 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/fragment_padding_top"
+    android:background="@color/colorBackground"
+    tools:context="com.iva.findexpert.UI.Common.Fragments.MessageSummaryFragment">
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:textStyle="italic"
+        android:id="@+id/empty"
+        android:layout_margin="20dp"
+        android:text="No message threads"
+        android:visibility="gone"
+        android:gravity="center"
+        style="@style/TextViewWhiteLarge"/>
+
+    <ListView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:paddingTop="5dp"
+        android:background="@color/background_white"
+        android:id="@+id/threadList">
+
+    </ListView>
+
+
+</FrameLayout>

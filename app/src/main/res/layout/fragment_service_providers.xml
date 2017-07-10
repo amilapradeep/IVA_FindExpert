@@ -1,0 +1,58 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_view_background"
+    android:paddingTop="@dimen/fragment_padding_top"
+    tools:context="com.iva.findexpert.UI.Common.Fragments.ServiceProvidersFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:paddingTop="10dp"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Around Me -"
+                android:paddingLeft="10dp"
+                style="@style/TextViewWhiteLarge"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Hospitals"
+                android:id="@+id/categoryName"
+                style="@style/TextViewWhiteLarge"/>
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textStyle="italic"
+            android:id="@+id/empty"
+            android:layout_margin="20dp"
+            android:text="No service providers under this category"
+            android:visibility="gone"
+            android:gravity="center"
+            style="@style/TextViewWhiteLarge"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:divider="@null"
+            android:dividerHeight="0dp"
+            android:id="@+id/providers">
+
+        </ListView>
+
+    </LinearLayout>
+
+</FrameLayout>

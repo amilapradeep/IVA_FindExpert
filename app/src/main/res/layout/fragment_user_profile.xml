@@ -1,0 +1,510 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_view_background"
+    android:paddingTop="@dimen/fragment_padding_top"
+    tools:context="com.iva.findexpert.UI.Common.Fragments.UserProfileFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="0dp"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Profile"
+                android:padding="10dp"
+                style="@style/TextViewWhiteExtraLarge"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:background="@color/background_white"
+                android:visibility="gone"></View>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="55dp"
+            android:layout_marginTop="40dp"
+            android:padding="5dp"
+            android:id="@+id/pageScroll"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/container"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edittext_light_border">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="110dp"
+                                android:layout_height="30dp"
+                                android:text="First Name"
+                                style="@style/TextViewDarkGreyMedium"/>
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="120dp"
+                            android:id="@+id/firstName"
+                            android:maxLength="50"
+                            android:maxLines="1"
+                            android:inputType="textPersonName"
+                            style="@style/EditTextDarkGreyNoBorderSmall"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edittext_light_border">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="110dp"
+                                android:layout_height="30dp"
+                                android:text="Last Name"
+                                style="@style/TextViewDarkGreyMedium"/>
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="120dp"
+                            android:id="@+id/lastName"
+                            android:maxLength="50"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            style="@style/EditTextDarkGreyNoBorderSmall"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:paddingRight="10dp"
+                android:paddingLeft="10dp"
+                android:background="@drawable/edittext_light_border">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:paddingTop="5dp"
+                        android:paddingBottom="5dp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="110dp"
+                            android:layout_height="30dp"
+                            android:text="Gender"
+                            style="@style/TextViewDarkGreyMedium"/>
+
+                    </LinearLayout>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="35dp"
+                        android:layout_alignParentEnd="true"
+                        android:layout_centerVertical="true"
+                        android:layout_marginLeft="120dp" >
+
+                        <RadioGroup
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:orientation="horizontal"
+                            android:id="@+id/genderRadioGroup">
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:text="Male"
+                                android:id="@+id/male"
+                                android:checked="true"
+                                style="@style/TextViewGreyMedium"/>
+                            <RadioButton
+                                android:layout_width="wrap_content"
+                                android:layout_height="match_parent"
+                                android:layout_marginLeft="20dp"
+                                android:text="Female"
+                                android:id="@+id/female"
+                                style="@style/TextViewGreyMedium"/>
+                        </RadioGroup>
+
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edittext_light_border">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="110dp"
+                                android:layout_height="30dp"
+                                android:text="Street"
+                                style="@style/TextViewDarkGreyMedium"/>
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="120dp"
+                            android:id="@+id/street"
+                            android:maxLength="50"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            style="@style/EditTextDarkGreyNoBorderSmall"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edittext_light_border">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="110dp"
+                                android:layout_height="30dp"
+                                android:text="City"
+                                style="@style/TextViewDarkGreyMedium"/>
+
+                        </LinearLayout>
+
+                        <AutoCompleteTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_marginLeft="120dp"
+                            android:id="@+id/city"
+                            android:maxLength="50"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            style="@style/EditTextDarkGreyNoBorderSmall"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edittext_light_border">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="110dp"
+                                android:layout_height="30dp"
+                                android:text="Telephone"
+                                style="@style/TextViewDarkGreyMedium"/>
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="120dp"
+                            android:id="@+id/telephone"
+                            android:inputType="phone"
+                            android:maxLength="10"
+                            android:maxLines="1"
+                            style="@style/EditTextDarkGreyNoBorderSmall"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edittext_light_border">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="110dp"
+                                android:layout_height="30dp"
+                                android:text="Mobile"
+                                style="@style/TextViewDarkGreyMedium"/>
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="120dp"
+                            android:inputType="phone"
+                            android:id="@+id/mobile"
+                            android:maxLength="20"
+                            android:maxLines="1"
+                            android:enabled="false"
+                            style="@style/EditTextDarkGreyNoBorderSmall"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edittext_light_border">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="110dp"
+                                android:layout_height="30dp"
+                                android:text="Email"
+                                style="@style/TextViewDarkGreyMedium"/>
+
+                        </LinearLayout>
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="120dp"
+                            android:id="@+id/email"
+                            android:maxLength="100"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            style="@style/EditTextDarkGreyNoBorderSmall"
+                            />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="10dp"
+                    android:background="@drawable/edittext_light_border">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="110dp"
+                                android:layout_height="30dp"
+                                android:text="Contact Method"
+                                style="@style/TextViewDarkGreyMedium"/>
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:layout_marginLeft="120dp" >
+
+                            <RadioGroup
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:orientation="vertical"
+                                android:paddingTop="0dp"
+                                android:id="@+id/contactMethodRadioGroup">
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="35dp"
+                                    android:text="Phone"
+                                    android:id="@+id/optPhone"
+                                    style="@style/TextViewGreyMedium"/>
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="35dp"
+                                    android:text="Message"
+                                    android:id="@+id/optMessage"
+                                    style="@style/TextViewGreyMedium"/>
+                                <RadioButton
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="35dp"
+                                    android:text="Both"
+                                    android:id="@+id/optBoth"
+                                    android:checked="true"
+                                    style="@style/TextViewGreyMedium"/>
+                            </RadioGroup>
+
+                        </LinearLayout>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Save Profile"
+                android:textSize="15sp"
+                android:id="@+id/saveProfileButton"
+                style="@style/WhiteButtonWithBorder"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+
+</FrameLayout>

@@ -1,0 +1,107 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_view_background"
+    android:paddingTop="@dimen/fragment_padding_top"
+    tools:context="com.iva.findexpert.UI.Common.Fragments.OffersFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Products &amp; Offers"
+                android:padding="10dp"
+                style="@style/TextViewWhiteLarge"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"
+                android:minHeight="80dp"
+                android:background="@drawable/box_left_border_white">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:paddingLeft="10dp"
+                    android:id="@+id/title"
+                    style="@style/TextViewWhiteMedium"/>
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:paddingLeft="10dp"
+                    android:id="@+id/header"
+                    style="@style/TextViewWhiteSmall"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="15dp"
+                android:layout_marginBottom="5dp"
+                android:gravity="center">
+
+                <Button
+                    android:layout_width="150dp"
+                    android:layout_height="40dp"
+                    android:text="Discover More"
+                    android:textColor="#444"
+                    android:id="@+id/discoverButton"
+                    style="@style/WhiteButton"/>
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:background="@color/background_white"></View>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="100dp"
+                android:textStyle="italic"
+                android:id="@+id/empty"
+                android:layout_margin="20dp"
+                android:text="No existing offers"
+                android:visibility="gone"
+                android:gravity="center"
+                style="@style/TextViewWhiteLarge"/>
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="25dp"
+                android:divider="@null"
+                android:dividerHeight="2dp"
+                android:id="@+id/promotions">
+
+            </ListView>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

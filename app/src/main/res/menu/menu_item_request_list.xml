@@ -1,0 +1,22 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools" >
+
+
+    <item
+        android:id="@+id/action_new"
+        android:title="New"
+        android:orderInCategory="10"
+        android:icon="@mipmap/ic_add_to_list"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/action_overflow"
+        android:icon="@mipmap/ic_action_overflow"
+        android:orderInCategory="11"
+        app:showAsAction="always"
+        android:title="More"
+        >
+    </item>
+
+</menu>

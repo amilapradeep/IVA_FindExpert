@@ -1,0 +1,80 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="@dimen/fragment_padding_top"
+    android:background="@color/colorBackground"
+    tools:context="com.iva.findexpert.UI.Common.Fragments.MessageFragment">
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textStyle="italic"
+            android:id="@+id/empty"
+            android:layout_margin="20dp"
+            android:text="No messages"
+            android:visibility="gone"
+            android:gravity="center"
+            style="@style/TextViewWhiteLarge"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/listContainer"
+            android:gravity="top"
+            android:layout_marginBottom="60dp">
+
+            <ListView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/messageList"
+                android:layout_marginTop="10dp"
+                android:transcriptMode="alwaysScroll"
+                android:stackFromBottom="true"
+                android:divider="@null">
+            </ListView>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true"
+            android:padding="10dp"
+            android:id="@+id/buttonContainer"
+            android:gravity="center">
+
+            <Button
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:text="Message"
+                android:textColor="#444"
+                android:id="@+id/messageButton"
+                android:visibility="gone"
+                style="@style/WhiteButton"/>
+
+            <View
+                android:layout_width="20dp"
+                android:layout_height="match_parent"/>
+
+            <Button
+                android:layout_width="125dp"
+                android:layout_height="40dp"
+                android:text="Accept"
+                android:textColor="#444"
+                android:id="@+id/acceptButton"
+                android:visibility="gone"
+                style="@style/WhiteButton"/>
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

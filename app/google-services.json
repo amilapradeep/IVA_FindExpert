@@ -1,0 +1,42 @@
+{
+  "project_info": {
+    "project_number": "843528056820",
+    "firebase_url": "https://findexpert-fcdae.firebaseio.com",
+    "project_id": "findexpert-fcdae",
+    "storage_bucket": "findexpert-fcdae.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:843528056820:android:6ee0869b6f45f081",
+        "android_client_info": {
+          "package_name": "com.iva.findexpert"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "843528056820-4kshnak0felfilrs1r70jdgmm8m9htkp.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDYeCJuAWBoiAJeOwrEJWU2SCC4IADH-7U"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 1,
+          "other_platform_oauth_client": []
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

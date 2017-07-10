@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="10dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="75dp"
+        android:gravity="center_vertical"
+        android:paddingRight="5dp"
+        android:paddingLeft="10dp"
+        android:id="@+id/container"
+        android:layout_marginRight="50dp"
+        android:elevation="4dp"
+        android:background="@drawable/bg_message_list_item"
+        >
+
+        <LinearLayout
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_centerVertical="true"
+            android:gravity="center"
+            android:background="@drawable/bg_circle_green">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:id="@+id/imageView"
+                android:scaleType="centerCrop"
+                android:src="@mipmap/ic_message_white"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Johnn Smith"
+                android:id="@+id/sender"
+                android:paddingTop="5dp"
+                android:layout_marginEnd="80dp"
+                style="@style/TextViewDarkGreyLarge"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/message"
+                android:paddingTop="5dp"
+                android:layout_marginRight="30dp"
+                style="@style/TextViewGreySmall"
+                />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="2016-11-01"
+                android:id="@+id/time"
+                android:paddingTop="5dp"
+                android:paddingRight="5dp"
+                android:layout_gravity="right"
+                style="@style/TextViewGreySmall"
+                />
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:src="@mipmap/ic_description"
+            android:layout_marginTop="5dp"
+            android:layout_alignParentEnd="true"
+            android:visibility="gone"
+            android:id="@+id/quote"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

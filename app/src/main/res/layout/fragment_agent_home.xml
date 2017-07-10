@@ -1,0 +1,402 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_view_background"
+    android:paddingTop="@dimen/fragment_padding_top"
+    tools:context="com.iva.findexpert.UI.Agent.Fragments.AgentHomeFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="10dp"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentStart="true">
+
+            <ImageView
+                android:layout_width="155dp"
+                android:layout_height="155dp"
+                android:layout_gravity="center"
+                android:src="@mipmap/ic_logo"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginTop="10dp"
+                android:visibility="gone"
+                android:background="@color/background_white"></View>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="30dp"
+                android:gravity="center">
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:text="Services"
+                    android:paddingLeft="5dp"
+                    style="@style/TextViewWhiteLarge"/>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="45dp"
+                    android:layout_margin="10dp"
+                    android:elevation="3dp"
+                    android:id="@+id/InsuranceButton">
+
+                    <RelativeLayout
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent"
+                        android:id="@+id/customButtonContainer">
+
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1"
+                            android:background="@drawable/custom_button_background">
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:gravity="center|right"
+                                android:layout_weight="0.3">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:scaleType="centerInside"
+                                    android:adjustViewBounds="true"
+                                    android:src="@mipmap/ic_directions_car_black"
+                                    android:id="@+id/customButtonImage"
+                                    />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Vehicle Insurance"
+                                android:gravity="center|left"
+                                android:layout_weight="0.7"
+                                android:paddingLeft="10dp"
+                                style="@style/TextViewDarkGreyMedium"
+                                android:id="@+id/customButtonText"
+                                />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_margin="10dp"
+                    android:layout_height="40dp"
+                    android:visibility="gone">
+
+                    <RelativeLayout
+                        xmlns:android="http://schemas.android.com/apk/res/android"
+                        android:layout_width="fill_parent"
+                        android:layout_height="fill_parent">
+                        <LinearLayout
+                            android:layout_width="fill_parent"
+                            android:layout_height="fill_parent"
+                            android:gravity="center"
+                            android:orientation="horizontal"
+                            android:weightSum="1"
+                            android:background="@drawable/custom_button_background"
+                            >
+
+                            <RelativeLayout
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:gravity="center|right"
+                                android:layout_weight="0.3">
+
+                                <ImageView
+                                    android:layout_width="25dp"
+                                    android:layout_height="25dp"
+                                    android:scaleType="centerInside"
+                                    android:adjustViewBounds="true"
+                                    android:src="@mipmap/ic_directions_car_black"
+                                    />
+
+                            </RelativeLayout>
+
+                            <TextView
+                                android:layout_width="0dp"
+                                android:layout_height="fill_parent"
+                                android:text="Travel Insurance"
+                                android:gravity="center|left"
+                                android:paddingLeft="10dp"
+                                android:layout_weight="0.7"
+                                style="@style/TextViewDarkGreyMedium"
+                                />
+
+                        </LinearLayout>
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="70dp"
+            android:orientation="horizontal"
+            android:layout_alignParentBottom="true">
+
+            <TableRow
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:weightSum="4">
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/toolbar_button_background"
+                    android:id="@+id/requestListButton"
+                    >
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="25dp"
+                        android:scaleType="fitCenter"
+                        android:src="@mipmap/ic_perm_phone_msg_white"
+                        android:id="@+id/imageView" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Enquiry"
+                        style="@style/TextViewWhiteSmall"/>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_height="60dp"
+                    android:layout_width="0.5dp"
+                    android:background="@color/background_white"></View>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/toolbar_button_background"
+                    android:id="@+id/pendingRequestListButton"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:id="@+id/imgPending"
+                                android:src="@mipmap/ic_drafts_white"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Pending"
+                                style="@style/TextViewWhiteSmall"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true">
+                            <TextView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:background="@drawable/bg_circle_red"
+                                android:text="22"
+                                android:layout_marginLeft="30dp"
+                                android:gravity="center"
+                                android:id="@+id/pendingCount"
+                                android:visibility="gone"
+                                android:elevation="2dp"
+                                style="@style/TextViewWhiteSmallWithoutPadding"/>
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_height="60dp"
+                    android:layout_width="0.5dp"
+                    android:background="@color/background_white"></View>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/toolbar_button_background"
+                    android:id="@+id/followUpRequestListButton"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:src="@mipmap/ic_warning_white"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Follow Up"
+                                style="@style/TextViewWhiteSmall"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true">
+                            <TextView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:background="@drawable/bg_circle_red"
+                                android:text="22"
+                                android:layout_marginLeft="30dp"
+                                android:gravity="center"
+                                android:id="@+id/followUpCount"
+                                android:visibility="gone"
+                                android:elevation="2dp"
+                                style="@style/TextViewWhiteSmallWithoutPadding"/>
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_height="60dp"
+                    android:layout_width="0.5dp"
+                    android:background="@color/background_white"></View>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:id="@+id/messageListButton"
+                    android:background="@drawable/toolbar_button_background"
+                    >
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center"
+                            android:orientation="vertical">
+                            <ImageView
+                                android:layout_width="25dp"
+                                android:layout_height="25dp"
+                                android:id="@+id/imgMessage"
+                                android:src="@mipmap/ic_message_white"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Messages"
+                                style="@style/TextViewWhiteSmall"/>
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true">
+                            <TextView
+                                android:layout_width="22dp"
+                                android:layout_height="22dp"
+                                android:background="@drawable/bg_circle_red"
+                                android:text="22"
+                                android:layout_marginLeft="30dp"
+                                android:gravity="center"
+                                android:id="@+id/msgCount"
+                                android:visibility="gone"
+                                android:elevation="2dp"
+                                style="@style/TextViewWhiteSmallWithoutPadding"/>
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+                <View
+                    android:layout_height="60dp"
+                    android:layout_width="0.5dp"
+                    android:background="@color/background_white"
+                    android:visibility="gone"></View>
+
+                <LinearLayout
+                    android:layout_weight="1"
+                    android:layout_height="match_parent"
+                    android:gravity="center"
+                    android:orientation="vertical"
+                    android:background="@drawable/toolbar_button_background"
+                    android:id="@+id/profileButton"
+                    android:visibility="gone"
+                    >
+
+                    <ImageView
+                        android:layout_width="25dp"
+                        android:layout_height="25dp"
+                        android:src="@mipmap/ic_person_white"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="My Info"
+                        style="@style/TextViewWhiteSmall"/>
+
+                </LinearLayout>
+
+            </TableRow>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

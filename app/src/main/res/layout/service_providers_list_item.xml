@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp"
+    android:paddingBottom="5dp"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@drawable/list_item_background"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:paddingTop="5dp"
+        android:paddingBottom="10dp"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginRight="40dp"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Template Name"
+                android:id="@+id/company"
+                android:layout_marginLeft="10dp"
+                android:paddingTop="2dp"
+                style="@style/TextViewDarkGreyLarge"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Distance: "
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="5dp"
+                    style="@style/TextViewGreySmall"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="0km"
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:id="@+id/distance"
+                    style="@style/TextViewGreySmall"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Hospital"
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:id="@+id/category"
+                    style="@style/TextViewGreySmall"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Galle Road, Clombo"
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:id="@+id/address"
+                    style="@style/TextViewGreySmall"
+                    />
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Phone:"
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="5dp"
+                    style="@style/TextViewGreySmall"
+                    />
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text=""
+                    android:layout_marginLeft="10dp"
+                    android:paddingTop="5dp"
+                    android:id="@+id/phone"
+                    style="@style/TextViewGreySmall"
+                    />
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:src="@mipmap/ic_phone_white"
+            android:background="@drawable/bg_circle_blue"
+            android:scaleType="center"
+            android:layout_marginRight="10dp"
+            android:id="@+id/phoneButton"
+            android:layout_centerVertical="true"
+            android:layout_alignParentEnd="true"/>
+
+    </RelativeLayout>
+
+</RelativeLayout>

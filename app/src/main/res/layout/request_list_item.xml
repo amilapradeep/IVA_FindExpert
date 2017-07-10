@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:paddingBottom="5dp"
+    android:paddingLeft="5dp"
+    android:paddingRight="5dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="65dp"
+        android:orientation="horizontal"
+        android:background="@drawable/list_item_background"
+        android:gravity="center_vertical"
+        android:layout_alignParentTop="true"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:id="@+id/container"
+        android:layout_alignParentStart="true">
+
+        <ImageView
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:id="@+id/imageView"
+            android:layout_centerVertical="true"
+            android:scaleType="center"
+            android:background="@drawable/bg_circle_purple"
+            android:src="@mipmap/ic_perm_phone_msg_white"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="WP KE 6000"
+            android:id="@+id/vehicleRegNo"
+            android:layout_marginLeft="40dp"
+            android:paddingTop="5dp"
+            android:textSize="14sp"
+            style="@style/TextViewDarkGreyTitle"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Vehicle Insurance"
+            android:id="@+id/insuranceType"
+            android:layout_below="@id/vehicleRegNo"
+            android:layout_marginLeft="40dp"
+            android:paddingTop="5dp"
+            style="@style/TextViewGreySmall"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="2016-11-01"
+            android:id="@+id/createdDate"
+            android:paddingTop="0dp"
+            android:paddingRight="30dp"
+            android:layout_alignParentRight="true"
+            style="@style/TextViewGreySmall"
+            />
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/ic_right_arrow"/>
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

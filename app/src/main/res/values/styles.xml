@@ -1,0 +1,315 @@
+<resources>
+
+    <!-- Window application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:dialogTheme">@layout/custom_dialog</item>
+    </style>
+
+    <style name="CustomListPopupWindow">
+        <item name="android:background">@drawable/main_view_background</item>
+    </style>
+
+    <style name="RoundButton" parent="@android:style/Widget.Button">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dip</item>
+        <item name="android:background">@drawable/round_button</item>
+    </style>
+
+    <style name="WhiteButton" parent="@android:style/Widget.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#222</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dip</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/button_white_round_corners</item>
+    </style>
+
+    <style name="WhiteButtonSRCode" parent="@android:style/Widget.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#444</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dip</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+        <item name="android:textStyle">bold</item>
+        <item name="android:background">@drawable/button_white_sr_code</item>
+    </style>
+
+    <style name="WhiteButtonWithBorder" parent="@android:style/Widget.Button">
+        <item name="android:textSize">14sp</item>
+        <item name="android:textColor">#444</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dip</item>
+        <item name="android:background">@drawable/button_white_with_border</item>
+    </style>
+
+    <style name="GreyButton" parent="@android:style/Widget.Button">
+        <item name="android:textSize">18sp</item>
+        <item name="android:textColor">#222</item>
+        <item name="android:gravity">center</item>
+        <item name="android:padding">5dip</item>
+        <item name="android:background">@drawable/button_grey_round_corners</item>
+    </style>
+
+    <style name="CustomDialogTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@drawable/dialog_background</item>
+    </style>
+
+    <style name="CustomProgressTheme" parent="@android:style/Theme.Dialog">
+        <item name="android:windowMinWidthMajor">100%</item>
+        <item name="android:windowMinWidthMinor">100%</item>
+        <item name="android:windowIsFloating">false</item>
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:background">@drawable/progress_background</item>
+    </style>
+
+    <style name="TextViewBlackSmall" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">2dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextViewBlackMedium" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextViewBlueMedium" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorBackgroundEnd</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextViewBlackLarge" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextViewBlackTitle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#111111</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">left</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextViewGreySmall" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#555</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextViewGreyMedium" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#555</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextViewGreyLarge" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#555</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextViewDarkGreyMedium" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#333</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextViewDarkGreyLarge" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#333</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextViewDarkGreyTitle" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#333</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextViewWhiteSmall" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextViewWhiteSmallWithoutPadding" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">11sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingTop">0dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextViewWhiteMedium" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextViewWhiteLarge" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">2dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextViewWhiteExtraLarge" parent="@android:style/TextAppearance">
+        <item name="android:textColor">#ffffff</item>
+        <item name="android:textSize">18sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:paddingTop">5dp</item>
+        <item name="android:background">@android:color/transparent</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="TextViewBlueSmall" parent="@android:style/TextAppearance">
+        <item name="android:textColor">@color/colorBackgroundEnd</item>
+        <item name="android:textSize">12sp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="BoxWhite">
+        <item name="android:textColor">#676B67</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/edittext_light_border</item>
+        <item name="android:gravity"></item>
+    </style>
+
+    <style name="TabButtonBackground">
+        <item name="android:textColor">#676B67</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/bg_tab_button</item>
+        <item name="android:gravity">center</item>
+    </style>
+
+    <style name="EditTextGrey">
+        <item name="android:textColor">#555</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/edittext_light_border</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:height">28dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="EditTextGreyLarge">
+        <item name="android:textColor">#555</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/edittext_light_border</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:height">30dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="EditTextDarkGrey">
+        <item name="android:textColor">#444444</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/edittext_light_border</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:height">35dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="EditTextDarkGreyNoBorder">
+        <item name="android:textColor">#333</item>
+        <item name="android:textSize">16sp</item>
+        <item name="android:background">@drawable/edittext_noborder</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:height">35dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="EditTextDarkGreyNoBorderSmall">
+        <item name="android:textColor">#333</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/edittext_noborder</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:height">35dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="EditTextDarkGreyLightBorder">
+        <item name="android:textColor">#333</item>
+        <item name="android:textSize">14sp</item>
+        <item name="android:background">@drawable/edittext_light_blue_border</item>
+        <item name="android:paddingLeft">5dp</item>
+        <item name="android:height">35dp</item>
+        <item name="android:gravity">center_vertical</item>
+        <item name="android:fontFamily">sans-serif-light</item>
+    </style>
+
+    <style name="FullscreenTheme" parent="AppTheme">
+        <item name="android:actionBarStyle">@style/FullscreenActionBarStyle</item>
+        <item name="android:windowActionBarOverlay">true</item>
+        <item name="android:windowBackground">@null</item>
+        <item name="metaButtonBarStyle">?android:attr/buttonBarStyle</item>
+        <item name="metaButtonBarButtonStyle">?android:attr/buttonBarButtonStyle</item>
+    </style>
+
+    <style name="FullscreenActionBarStyle" parent="Widget.AppCompat.ActionBar">
+        <item name="android:background">@color/black_overlay</item>
+    </style>
+
+</resources>

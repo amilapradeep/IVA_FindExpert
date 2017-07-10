@@ -1,0 +1,758 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_view_background"
+    android:paddingTop="@dimen/fragment_padding_top"
+    tools:context="com.iva.findexpert.UI.Buyer.Fragments.RequestCreateFragment">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:paddingTop="0dp"
+            android:layout_height="40dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:text="Quotation Request"
+                android:paddingLeft="10dp"
+                style="@style/TextViewWhiteExtraLarge"/>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:visibility="gone"
+                android:background="@color/background_white"></View>
+
+        </LinearLayout>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="55dp"
+            android:layout_marginTop="40dp"
+            android:padding="5dp"
+            android:id="@+id/pageScroll"
+            android:scrollbars="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:id="@+id/container"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/vehicleNoHeader"
+                    android:background="@drawable/edittext_light_border">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:text="Vehicle Number"
+                                style="@style/TextViewDarkGreyMedium"
+                                android:id="@+id/textView3" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:textStyle="italic"
+                                android:text=""
+                                android:visibility="gone"
+                                android:id="@+id/vehicleNoTextView"
+                                style="@style/TextViewGreySmall"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_right_arrow"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:background="@color/background_white"
+                    android:id="@+id/vehicleNoDetail">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:maxLength="15"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:id="@+id/vehicleNoEditText"
+                            style="@style/EditTextDarkGreyLightBorder"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/insuranceTypeHeader"
+                    android:background="@drawable/edittext_light_border">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:text="Policy Type"
+                                style="@style/TextViewDarkGreyMedium"
+                                android:id="@+id/textView4" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:textStyle="italic"
+                                android:text=""
+                                android:visibility="gone"
+                                android:id="@+id/insuranceTypeTextView"
+                                style="@style/TextViewGreySmall"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:src="@mipmap/ic_right_arrow"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentEnd="true"
+                            android:id="@+id/imageView2" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:background="@color/background_white"
+                    android:id="@+id/insuranceTypeDetail">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/insuranceTypeRadioGroup"
+                        android:paddingLeft="20dp">
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="Comprehensive"
+                            android:id="@+id/optComprehensive"
+                            style="@style/TextViewGreyMedium"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="Third party"
+                            android:id="@+id/optthirdParty"
+                            style="@style/TextViewGreyMedium"/>
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/registrationCategoryHeader"
+                    android:background="@drawable/edittext_light_border">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:text="Registration Category"
+                                style="@style/TextViewDarkGreyMedium"
+                                android:id="@+id/textView2" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:textStyle="italic"
+                                android:text="Privacy Policy"
+                                android:visibility="gone"
+                                android:id="@+id/registrationTypeTextView"
+                                style="@style/TextViewGreySmall"/>
+
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_right_arrow"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:background="@color/background_white"
+                    android:id="@+id/registrationCategoryDetail">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/registraionTypeRadioGroup"
+                        android:paddingLeft="20dp">
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="@string/cat_motor_car"
+                            android:id="@+id/optMotorCar"
+                            style="@style/TextViewGreyMedium"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="@string/cat_dual_purpose"
+                            android:id="@+id/optDualPurpose"
+                            style="@style/TextViewGreyMedium"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="@string/cat_motor_lorry"
+                            android:id="@+id/optMotorLorry"
+                            style="@style/TextViewGreyMedium"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="@string/cat_motor_cycle"
+                            android:id="@+id/optMotorCycle"
+                            style="@style/TextViewGreyMedium"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="@string/cat_motor_three_wheel"
+                            android:id="@+id/optMotorThreeWheel"
+                            style="@style/TextViewGreyMedium"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="@string/cat_motor_bus"
+                            android:id="@+id/optMotorBus"
+                            style="@style/TextViewGreyMedium"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="@string/cat_prime_mover"
+                            android:id="@+id/optPrimeMover"
+                            style="@style/TextViewGreyMedium"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="@string/cat_land_vehicle"
+                            android:id="@+id/optLandVehicle"
+                            style="@style/TextViewGreyMedium"/>
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/usageHeader"
+                    android:background="@drawable/edittext_light_border">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:text="Usage"
+                                style="@style/TextViewDarkGreyMedium"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:textStyle="italic"
+                                android:text=""
+                                android:visibility="gone"
+                                android:id="@+id/usageTextView"
+                                style="@style/TextViewGreySmall"/>
+
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_right_arrow"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:background="@color/background_white"
+                    android:id="@+id/usageDetail">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/usageRadioGroup"
+                        android:paddingLeft="20dp">
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="Private"
+                            android:id="@+id/optPrivate"
+                            style="@style/TextViewGreyMedium"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="Hiring"
+                            android:id="@+id/optHiring"
+                            style="@style/TextViewGreyMedium"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="Rent"
+                            android:id="@+id/optRent"
+                            style="@style/TextViewGreyMedium"/>
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/valueHeader"
+                    android:background="@drawable/edittext_light_border">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:text="Vehicle Value"
+                                style="@style/TextViewDarkGreyMedium"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:textStyle="italic"
+                                android:text=""
+                                android:visibility="gone"
+                                android:id="@+id/valueTextView"
+                                style="@style/TextViewGreySmall"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_right_arrow"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:background="@color/background_white"
+                    android:id="@+id/valueDetail">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:inputType="number"
+                            android:maxLength="10"
+                            android:maxLines="1"
+                            android:id="@+id/valueEditText"
+                            style="@style/EditTextDarkGreyLightBorder"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/yearHeader"
+                    android:clickable="true"
+                    android:background="@drawable/edittext_light_border">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:text="Vehicle Year"
+                                style="@style/TextViewDarkGreyMedium"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:textStyle="italic"
+                                android:text=""
+                                android:visibility="gone"
+                                android:id="@+id/yearTextView"
+                                style="@style/TextViewGreySmall"/>
+
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_right_arrow"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:background="@color/background_white"
+                    android:id="@+id/yearDetail">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                       <Spinner
+                           android:layout_width="match_parent"
+                           android:layout_height="35dp"
+                           android:id="@+id/yearSelector"
+                           ></Spinner>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/isFinancedHeader"
+                    android:background="@drawable/edittext_light_border">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:text="Vehicle Financed"
+                                style="@style/TextViewDarkGreyMedium"/>
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:textStyle="italic"
+                                android:text=""
+                                android:visibility="gone"
+                                android:id="@+id/financedTextView"
+                                style="@style/TextViewGreySmall"/>
+
+                        </LinearLayout>
+
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_right_arrow"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:background="@color/background_white"
+                    android:id="@+id/isFinancedDetail">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/financedRadioGroup"
+                        android:paddingLeft="20dp">
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="Yes"
+                            android:id="@+id/optYes"
+                            style="@style/TextViewGreyMedium"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="No"
+                            android:id="@+id/optNo"
+                            style="@style/TextViewGreyMedium"/>
+
+                    </RadioGroup>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="20dp"
+                    android:id="@+id/locationHeader"
+                    android:background="@drawable/edittext_light_border">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:text="Nearest City"
+                                style="@style/TextViewDarkGreyMedium"
+                                />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:textStyle="italic"
+                                android:text=""
+                                android:visibility="gone"
+                                android:id="@+id/locationTextView"
+                                style="@style/TextViewGreySmall"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_right_arrow"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:padding="10dp"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:background="@color/background_white"
+                    android:id="@+id/locationDetail">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:paddingTop="10dp"
+                        android:paddingBottom="10dp"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp">
+
+                        <!--<EditText
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:maxLength="50"
+                            android:maxLines="1"
+                            android:id="@+id/locationEditText"
+                            style="@style/EditTextDarkGreyLightBorder"/>-->
+
+                        <AutoCompleteTextView
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:maxLength="50"
+                            android:inputType="text"
+                            android:maxLines="1"
+                            android:id="@+id/locationEditText"
+                            style="@style/EditTextDarkGreyLightBorder"/>
+
+                    </LinearLayout>
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:layout_alignParentBottom="true"
+            android:orientation="vertical">
+
+            <Button
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="Get Quote"
+                android:textSize="15sp"
+                android:id="@+id/createRequestButton"
+                style="@style/WhiteButton"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</FrameLayout>

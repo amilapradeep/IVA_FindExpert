@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="0dp">
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="wrap_content"
+        android:minHeight="75dp"
+        android:orientation="horizontal"
+        android:background="@drawable/list_item_background"
+        android:gravity="center_vertical"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:paddingTop="5dp"
+        android:paddingBottom="5dp"
+        android:layout_alignParentStart="true">
+
+
+        <RelativeLayout
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:layout_centerVertical="true"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:id="@+id/imageView"
+                android:layout_centerVertical="true"
+                android:scaleType="centerInside"
+                android:background="@drawable/bg_circle_thread_icon"
+                android:src="@mipmap/ic_forum_white"/>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true">
+                <TextView
+                    android:layout_width="22dp"
+                    android:layout_height="22dp"
+                    android:background="@drawable/bg_circle_red"
+                    android:text="10"
+                    android:layout_marginLeft="25dp"
+                    android:gravity="center"
+                    android:id="@+id/msgCount"
+                    android:visibility="gone"
+                    style="@style/TextViewWhiteSmallWithoutPadding"/>
+            </LinearLayout>
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_marginLeft="50dp"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Johnn Smith"
+                android:id="@+id/sender"
+                android:paddingTop="2dp"
+                android:layout_marginEnd="80dp"
+                style="@style/TextViewDarkGreyLarge"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vehicle Insurance"
+                android:id="@+id/messageFor"
+                android:paddingTop="5dp"
+                style="@style/TextViewGreySmall"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Vehicle Insurance"
+                android:id="@+id/description"
+                android:paddingTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:maxLines="1"
+                style="@style/TextViewGreySmall"
+                />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="55dp"
+            android:layout_height="wrap_content"
+            android:text="2016-11-01"
+            android:id="@+id/date"
+            android:paddingTop="5dp"
+            android:paddingRight="0dp"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            style="@style/TextViewGreySmall"
+            />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

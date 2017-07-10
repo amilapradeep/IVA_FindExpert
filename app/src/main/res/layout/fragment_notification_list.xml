@@ -1,0 +1,53 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/main_view_background"
+    android:paddingTop="@dimen/fragment_padding_top"
+    tools:context="com.iva.findexpert.UI.Common.NotificationListFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:paddingTop="0dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Notifications"
+            android:padding="10dp"
+            android:id="@+id/title"
+            style="@style/TextViewWhiteExtraLarge"/>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:visibility="gone"
+            android:background="@color/background_white"></View>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="100dp"
+            android:textStyle="italic"
+            android:id="@+id/empty"
+            android:layout_margin="20dp"
+            android:text="No notifications available for the user"
+            android:visibility="gone"
+            android:gravity="center"
+            style="@style/TextViewWhiteLarge"/>
+
+        <ListView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:id="@+id/notificationList"
+            android:divider="@null"
+            android:paddingTop="0dp"
+            android:paddingBottom="5dp"
+            >
+
+        </ListView>
+
+    </LinearLayout>
+
+</FrameLayout>

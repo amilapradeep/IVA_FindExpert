@@ -1,0 +1,99 @@
+<resources>
+    <string name="app_name">SOLK</string>
+    <string name="title_activity_login">Log in</string>
+
+    <!-- Strings related to login -->
+    <string name="prompt_email">Email</string>
+    <string name="prompt_password">Password (optional)</string>
+    <string name="action_sign_in">Login or register</string>
+    <string name="action_sign_in_short">Login</string>
+    <string name="error_invalid_email">This email address is invalid</string>
+    <string name="error_invalid_password">This password is too short</string>
+    <string name="error_incorrect_password">This password is incorrect</string>
+    <string name="error_field_required">This field is required</string>
+    <string name="permission_rationale">"Contacts permissions are needed for providing email
+        completions."
+    </string>
+
+    <string name="open_drawer">Open</string>
+    <string name="close_drawer">Close</string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string-array name="arr_buyer_modules">
+        <item>Home</item>
+        <item>Profile</item>
+        <item>Products and Offers</item>
+        <item>About</item>
+        <item>Feedback</item>
+        <item>Notifications</item>
+        <item></item>
+        <item>Log Off</item>
+    </string-array>
+
+    <string-array name="arr_agent_modules">
+        <item>Home</item>
+        <item>Profile</item>
+        <item>Products and Offers</item>
+        <item>About</item>
+        <item>Feedback</item>
+        <item>Notifications</item>
+        <item></item>
+        <item>Log Off</item>
+    </string-array>
+
+    <string-array name="buyer_sr_list_menus">
+        <item>All</item>
+        <item>Accepted</item>
+        <item>Closed</item>
+    </string-array>
+
+    <string-array name="notification_list_menus">
+        <item>Delete Selected</item>
+        <item>Delete All</item>
+    </string-array>
+
+    <string name="tellmemore_para_one">
+        We’ll help you explore car insurance options to find the features and benefits that match what you
+        need. \n\n
+        Our sales consultants know their stuff. Their smarts, combined with our technology, means you can
+        compare and find the right car insurance for you.
+    </string>
+
+    <string name="tellmemore_para_two">
+        This covers the cost of repairs to or replacement of your own vehicle and property whether you are
+        at fault or not. It can also cover the cost of emergency repairs, transportation costs and damage caused by other drivers.
+    </string>
+
+    <string name="tellmemore_para_three">
+        Covers damage that you have caused to another person’s vehicle or property. It does not cover the
+        cost of damage to your own car. It usually includes legal costs, limited damage by uninsured drivers
+        and claims service.
+    </string>
+
+    <string name="cat_motor_car">Motor Car</string>
+    <string name="cat_dual_purpose">Dual Purpose Vehicle</string>
+    <string name="cat_motor_lorry">Motor Lorry</string>
+    <string name="cat_motor_cycle">Motor Cycle</string>
+    <string name="cat_motor_three_wheel">Motor Three Wheel</string>
+    <string name="cat_motor_bus">Motor Bus</string>
+    <string name="cat_prime_mover">Prime Mover</string>
+    <string name="cat_land_vehicle">Land Vehicle</string>
+
+    <string name="str_comprehensive">Comprehensive</string>
+    <string name="str_third_party">Third Party</string>
+
+    <string name="title_activity_terms_and_conditions">TermsAndConditionsActivity</string>
+     <string name="login_help">
+         <![CDATA[
+         Having trouble logging in? Call us on
+            <b>+94 112712950</b>
+        ]]>
+    </string>
+
+    <string name="title_activity_get_started">GetStartedActivity</string>
+    <string name="dummy_button">Dummy Button</string>
+    <string name="dummy_content">DUMMY\nCONTENT</string>
+
+</resources>
