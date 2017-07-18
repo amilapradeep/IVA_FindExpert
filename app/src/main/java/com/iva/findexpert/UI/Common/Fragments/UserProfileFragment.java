@@ -279,8 +279,10 @@ public class UserProfileFragment extends BaseFragment {
     @Override
    public boolean onBackPressed()
    {
-       if(profile == null)
+       if(profile == null) {
+           gotoParent();
            return true;
+       }
 
        if(!checkDirty())
        {

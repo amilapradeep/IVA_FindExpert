@@ -7,10 +7,12 @@ import android.os.Bundle;
 import android.text.Editable;
 import android.text.TextUtils;
 import android.text.TextWatcher;
+import android.util.Log;
 import android.view.View;
 import android.view.inputmethod.InputMethodManager;
 import android.widget.EditText;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import com.android.volley.Request;
 import com.google.gson.Gson;
@@ -118,27 +120,36 @@ public class ValidateCodeActivity extends BaseActivity {
                     {
                         Gson gson = new Gson();
                         UserViewModel userModel = gson.fromJson(result, UserViewModel.class);
+
                         if(userModel != null)
                         {
-                            User user = new User();
-                            user.Id = userModel.Id;
-                            user.IsAuthenticated = userModel.PasswordValidated;
-                            user.ConnectionId = userModel.ConnectionId;
-                            user.Token = userModel.Token;
-                            user.Password = userModel.Password;
-                            user.UserName = userModel.Name;
-                            user.Phone = userModel.UserName;
-                            user.Type = Constant.UserType.BUYER;
-                            user.RemoteId = userModel.LoginId;
-                            user.ProfileId = userModel.ProfileId;
-                            user.CompanyId = userModel.CompanyId;
+                            try {
+                                User user = new User();
+                                user.Id = userModel.Id;
+                                user.IsAuthenticated = userModel.PasswordValidated;
+                                user.ConnectionId = userModel.ConnectionId;
+                                user.Token = userModel.Token;
+                                user.Password = userModel.Password;
+                                user.UserName = userModel.Name;
+                                user.Phone = userModel.UserName;
+                                user.Type = Constant.UserType.BUYER;
+                                user.RemoteId = userModel.LoginId;
+                                user.ProfileId = userModel.ProfileId;
+                                user.CompanyId = userModel.CompanyId;
 
-                            UserService userService = new UserService(getApplicationContext());
-                            userService.DeleteAll();
-                            userService.Insert(user);
+                                UserService userService = new UserService(getApplicationContext());
+                                userService.DeleteAll();
+                                userService.Insert(user);
 
-                            Intent page = new Intent(ValidateCodeActivity.this, BuyerHomeActivity.class);
-                            startActivity(page);
+                                Intent page = new Intent(ValidateCodeActivity.this, BuyerHomeActivity.class);
+                                startActivity(page);
+                            }
+                            catch (Exception e)
+                            {
+                                Log.e("loginError", e.getMessage());
+                                Toast.makeText(ValidateCodeActivity.this, "Error in login", Toast.LENGTH_LONG).show();
+                            }
+
                         }
                     }
                 }

@@ -16,8 +16,6 @@ import android.widget.Switch;
 import android.widget.TextView;
 
 import com.android.volley.Request;
-import com.google.firebase.FirebaseApp;
-import com.google.firebase.iid.FirebaseInstanceId;
 import com.google.gson.Gson;
 import com.iva.findexpert.Common.Constant;
 import com.iva.findexpert.DomainModel.User;

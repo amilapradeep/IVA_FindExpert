@@ -8,12 +8,12 @@ android {
         minSdkVersion 21
         targetSdkVersion 23
         versionName "1.0"
-        versionCode 4
+        versionCode 11
     }
     buildTypes {
         release {
-            minifyEnabled true
-            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+            minifyEnabled false
+            /*proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'*/
         }
     }
     productFlavors {
@@ -22,14 +22,11 @@ android {
 
 dependencies {
     compile fileTree(include: ['*.jar'], dir: 'libs')
-    compile files('libs/signalr-client-sdk.jar')
-    compile files('libs/signalr-client-sdk-android.jar')
     compile 'com.android.support:appcompat-v7:23.4.0'
     compile 'com.android.support:design:23.4.0'
     compile 'com.google.code.gson:gson:2.7'
     compile 'com.android.volley:volley:1.0.0'
     compile 'com.android.support:support-v4:23.4.0'
-    compile 'com.google.firebase:firebase-messaging:10.0.1'
     testCompile 'junit:junit:4.12'
 }
-apply plugin: 'com.google.gms.google-services'
+
