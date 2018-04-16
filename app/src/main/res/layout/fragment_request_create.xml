@@ -332,6 +332,93 @@
                     android:layout_height="wrap_content"
                     android:paddingRight="10dp"
                     android:paddingLeft="20dp"
+                    android:id="@+id/fuelTypeHeader"
+                    android:background="@drawable/edittext_light_border">
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical">
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:paddingTop="5dp"
+                            android:paddingBottom="5dp"
+                            android:orientation="vertical">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="30dp"
+                                android:text="Fuel Type"
+                                style="@style/TextViewDarkGreyMedium"
+                                android:id="@+id/txtFuelType" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="20dp"
+                                android:textStyle="italic"
+                                android:text="Fuel Type"
+                                android:visibility="gone"
+                                android:id="@+id/fuelTypeTextView"
+                                style="@style/TextViewGreySmall"/>
+
+                        </LinearLayout>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:layout_alignParentEnd="true"
+                            android:layout_centerVertical="true"
+                            android:src="@mipmap/ic_right_arrow"/>
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:padding="10dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:visibility="gone"
+                    android:background="@color/background_white"
+                    android:id="@+id/fuelTypeDetail">
+
+                    <RadioGroup
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:id="@+id/fuelTypeRadioGroup"
+                        android:paddingLeft="20dp">
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="@string/fuel_type_gas"
+                            android:id="@+id/optGas"
+                            style="@style/TextViewGreyMedium"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="@string/fuel_type_hybrid"
+                            android:id="@+id/optHybrid"
+                            style="@style/TextViewGreyMedium"/>
+
+                        <RadioButton
+                            android:layout_width="match_parent"
+                            android:layout_height="35dp"
+                            android:text="@string/fuel_type_electric"
+                            android:id="@+id/optElectric"
+                            style="@style/TextViewGreyMedium"/>
+
+                    </RadioGroup>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:paddingRight="10dp"
+                    android:paddingLeft="20dp"
                     android:id="@+id/usageHeader"
                     android:background="@drawable/edittext_light_border">
 

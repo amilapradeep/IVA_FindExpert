@@ -185,6 +185,15 @@ public class RequestCreateFragment extends BaseFragment {
 
             }
         });
+
+        getCurrentView().findViewById(R.id.fuelTypeHeader).setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                View detailView = getCurrentView().findViewById(R.id.fuelTypeDetail);
+                setExpandCollapse(detailView);
+            }
+        });
+
     }
 
     private void setExpandCollapse(View detailView)
@@ -383,6 +392,35 @@ public class RequestCreateFragment extends BaseFragment {
             }
         });
 
+        ((RadioGroup) getCurrentView().findViewById(
+                R.id.fuelTypeRadioGroup)).setOnCheckedChangeListener(new RadioGroup.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(RadioGroup group, int checkedId) {
+
+                switch (checkedId)
+                {
+                    case R.id.optGas:
+                        quotationRequest.FuelType = Constant.FuelType.GAS;
+                        break;
+
+                    case R.id.optHybrid:
+                        quotationRequest.FuelType = Constant.FuelType.HYBRID;
+                        break;
+
+                    case R.id.optElectric:
+                        quotationRequest.FuelType = Constant.FuelType.ELECTRIC;
+                        break;
+
+                    default:
+                        break;
+                }
+                TextView tv = ((TextView) getCurrentView().findViewById(R.id.fuelTypeTextView));
+                tv.setVisibility(View.VISIBLE);
+                tv.setText(((TextView)getCurrentView().findViewById(checkedId)).getText());
+                ViewAnimation.collapse(getCurrentView().findViewById(R.id.fuelTypeDetail));
+            }
+        });
+
         ((EditText) getCurrentView().findViewById(R.id.valueEditText)).addTextChangedListener(new TextWatcher() {
             @Override
             public void beforeTextChanged(CharSequence s, int start, int count, int after) {
@@ -505,6 +543,13 @@ public class RequestCreateFragment extends BaseFragment {
             showAlert(getActivity(), "Please select vehicle registration category!");
             return false;
         }
+        if(quotationRequest.FuelType == 0)
+        {
+            View detailView = getCurrentView().findViewById(R.id.fuelTypeDetail);
+            setExpandCollapse(detailView);
+            showAlert(getActivity(), "Please select vehicle fuel type!");
+            return false;
+        }
         if(quotationRequest.UsageType == 0)
         {
             View detailView = getCurrentView().findViewById(R.id.usageDetail);
@@ -563,6 +608,8 @@ public class RequestCreateFragment extends BaseFragment {
                 ((TextView)getCurrentView().findViewById(R.id.insuranceTypeTextView)).getText());
         ((TextView) dialog.findViewById(R.id.registrationCategory)).setText(
                 ((TextView)getCurrentView().findViewById(R.id.registrationTypeTextView)).getText());
+        ((TextView) dialog.findViewById(R.id.fuelType)).setText(
+                ((TextView)getCurrentView().findViewById(R.id.fuelTypeTextView)).getText());
         ((TextView) dialog.findViewById(R.id.vehicleUsage)).setText(
                 ((TextView)getCurrentView().findViewById(R.id.usageTextView)).getText());
         ((TextView) dialog.findViewById(R.id.vehicleValue)).setText(
@@ -703,6 +750,24 @@ public class RequestCreateFragment extends BaseFragment {
                 case 8:
                     ((RadioButton) getCurrentView().findViewById(R.id.optLandVehicle)).setChecked(true);
                     ((TextView) getCurrentView().findViewById(R.id.registrationTypeTextView)).setText(((RadioButton) getCurrentView().findViewById(R.id.optLandVehicle)).getText());
+                    break;
+                default:
+                    break;
+            }
+
+            switch (quotationRequest.FuelType)
+            {
+                case Constant.FuelType.GAS:
+                    ((RadioButton) getCurrentView().findViewById(R.id.optGas)).setChecked(true);
+                    ((TextView) getCurrentView().findViewById(R.id.fuelTypeTextView)).setText(R.string.fuel_type_gas);
+                    break;
+                case Constant.Usage.HIRING:
+                    ((RadioButton) getCurrentView().findViewById(R.id.optHybrid)).setChecked(true);
+                    ((TextView) getCurrentView().findViewById(R.id.fuelTypeTextView)).setText(R.string.fuel_type_hybrid);
+                    break;
+                case Constant.Usage.RENT:
+                    ((RadioButton) getCurrentView().findViewById(R.id.optElectric)).setChecked(true);
+                    ((TextView) getCurrentView().findViewById(R.id.fuelTypeTextView)).setText(R.string.fuel_type_electric);
                     break;
                 default:
                     break;

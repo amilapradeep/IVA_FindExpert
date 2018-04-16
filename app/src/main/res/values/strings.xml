@@ -72,6 +72,10 @@
         and claims service.
     </string>
 
+    <string name="fuel_type_gas">Petrol/Diesel</string>
+    <string name="fuel_type_hybrid">Hybrid</string>
+    <string name="fuel_type_electric">Electric</string>
+
     <string name="cat_motor_car">Motor Car</string>
     <string name="cat_dual_purpose">Dual Purpose Vehicle</string>
     <string name="cat_motor_lorry">Motor Lorry</string>

@@ -131,6 +131,21 @@ public class RequestDetailFragment extends BaseFragment {
                                 break;
                         }
 
+                        switch (request.FuelType)
+                        {
+                            case Constant.FuelType.GAS:
+                                ((TextView) getCurrentView().findViewById(R.id.fuelType)).setText(R.string.fuel_type_gas);
+                                break;
+                            case Constant.Usage.HIRING:
+                                ((TextView) getCurrentView().findViewById(R.id.fuelType)).setText(R.string.fuel_type_hybrid);
+                                break;
+                            case Constant.Usage.RENT:
+                                ((TextView) getCurrentView().findViewById(R.id.fuelType)).setText(R.string.fuel_type_electric);
+                                break;
+                            default:
+                                break;
+                        }
+
                         switch (request.UsageType)
                         {
                             case Constant.Usage.PRIVATE:

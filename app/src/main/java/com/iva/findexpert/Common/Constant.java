@@ -10,7 +10,7 @@ public class Constant {
 
     public static final String APP_KEY = "com.iva.FindExpert";
     public static final String BASE_URL = "https://api.solk.lk";
-    //public static final String BASE_URL = "http://andromeda.teamiva.tk:8080";
+    //public static final String BASE_URL = "http://192.168.8.100/SOLK";
 
     public static final int PHONE_NUMBER_LENGTH = 10;
     public static int REQUEST_TIME_OUT = 20; //20 secs
@@ -122,6 +122,13 @@ public class Constant {
         public static final String PRIVATE_NAME = "Private";
         public static final String HIRING_NAME = "Hiring";
         public static final String RENT_NAME = "Rent";
+    }
+
+    public static class FuelType
+    {
+        public static final int GAS = 1;
+        public  static final int HYBRID = 2;
+        public static final int ELECTRIC = 3;
     }
 
     public static class SessionKeys

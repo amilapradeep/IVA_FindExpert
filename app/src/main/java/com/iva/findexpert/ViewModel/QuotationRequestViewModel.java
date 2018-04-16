@@ -18,4 +18,5 @@ public class QuotationRequestViewModel {
     public long UserId;
     public String Location;
     public int ClientType = 1;
+    public int FuelType = 1;
 }

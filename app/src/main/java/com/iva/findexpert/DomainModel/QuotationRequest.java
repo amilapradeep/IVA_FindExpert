@@ -31,6 +31,7 @@ public class QuotationRequest {
     public String Location;
     public String TimeToExpire;
     public boolean IsFollowUp;
+    public int FuelType;
 
     public List<Quotation> QuotationList;
 }

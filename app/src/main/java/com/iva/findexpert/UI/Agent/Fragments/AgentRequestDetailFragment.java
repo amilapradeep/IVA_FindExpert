@@ -135,6 +135,20 @@ public class AgentRequestDetailFragment extends BaseFragment {
                         ((TextView)getCurrentView().findViewById(R.id.year)).setText(String.valueOf(request.VehicleYear));
                         ((TextView)getCurrentView().findViewById(R.id.city)).setText(String.valueOf(request.Location));
                         ((TextView)getCurrentView().findViewById(R.id.financed)).setText(request.IsFinanced ? "Yes" : "No");
+                        switch (request.FuelType)
+                        {
+                            case Constant.FuelType.GAS:
+                                ((TextView)getCurrentView().findViewById(R.id.fuelType)).setText(R.string.fuel_type_gas);
+                                break;
+                            case Constant.FuelType.HYBRID:
+                                ((TextView)getCurrentView().findViewById(R.id.fuelType)).setText(R.string.fuel_type_hybrid);
+                                break;
+                            case Constant.FuelType.ELECTRIC:
+                                ((TextView)getCurrentView().findViewById(R.id.fuelType)).setText(R.string.fuel_type_electric);
+                                break;
+                            default:
+                                break;
+                        }
                         mobileNo = request.BuyerMobile;
 
                         if(!request.IsAllowPhone)

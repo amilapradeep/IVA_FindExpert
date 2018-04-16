@@ -111,6 +111,26 @@
             <TextView
                 android:layout_width="150dp"
                 android:layout_height="wrap_content"
+                android:text="Fuel Type:"
+                style="@style/TextViewGreyMedium"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:id="@+id/fuelType"
+                style="@style/TextViewGreyMedium"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:paddingLeft="10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="150dp"
+                android:layout_height="wrap_content"
                 android:text="Usage:"
                 style="@style/TextViewGreyMedium"/>
             <TextView
